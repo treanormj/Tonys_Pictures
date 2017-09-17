@@ -1,0 +1,24 @@
+
+<% @reviews.each do |review| %>
+
+  <% if current_user && current_user.admin? %>
+    <%= button_to 'Delete Review', review_path(review), method: :delete %>
+  <% end %>
+<%end%>
+
+
+
+<div id="app">
+
+</div>
+
+<% if current_user && current_user.admin? || current_user && current_user.id == @mural.user_id %>
+<%= button_to "Delete Mural: #{@mural.name}", mural_path(@mural), method: :delete %>
+<% end %>
+
+<% @reviews.each do |review| %>
+<% if current_user && current_user.admin? || current_user && current_user.id == review.user_id %>
+<% review_user = User.find(review.user_id) %>
+<%= button_to "Delete Review by #{review_user.username}", review_path(review), method: :delete %>
+<% end %>
+<%end%>

@@ -1,0 +1,428 @@
+@import "foundation";
+
+$scheme-red: #8e3b46;
+$scheme-cream: #f6f5e0;
+$scheme-white: #ffffff;
+$scheme-light-blue: #798ce0;
+$scheme-dark-blue: #333787;
+
+$fugaz: 'Fugaz One', cursive;
+$quicksand: 'Quicksand', sans-serif;
+$bungie: 'Bungee Shade', cursive;
+$monoton: 'Monoton', cursive;
+$raleway: 'Raleway', sans-serif;
+
+body {
+  background-color: $scheme-red;
+}
+
+.topnav {
+  background-color: $scheme-dark-blue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  border-bottom-style: solid;
+  border-bottom-color: $scheme-red;
+  padding: 5px;
+
+  .menu {
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    align-items: center;
+
+    img {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      border-style: solid;
+      border-color: $scheme-cream;
+      border-width: thin;
+      margin: auto;
+      overflow: hidden;
+      transition: all 0.2s ease 0s;
+
+      &:hover {
+        box-shadow: 0 0 16px 5px $scheme-cream;
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+
+    .menuText {
+      font-size: 18px;
+      text-align: center;
+      padding: 10px 7px;
+      font-family: $fugaz;
+      color: $scheme-cream;
+      margin: 50px 10px;
+      transition: all 0.2s ease 0s;
+
+      &:hover {
+        background-color: $scheme-cream;
+        color: $scheme-dark-blue
+      }
+    }
+  }
+
+  .search {
+    align-items: right;
+    padding: 0;
+    margin-top: 20px;
+
+    .searchbutton {
+      text-align: right;
+      padding: 0;
+      margin: 0;
+    }
+
+    .searchbar {
+      text-align: right;
+      margin: 20px 0;
+      border-radius: 10%;
+      input {
+        border-style: solid;
+        border-width: 2px;
+        border-color: $scheme-red;
+        background: linear-gradient(90deg, $scheme-white, $scheme-cream);
+      }
+      input[type=text] {
+        margin: 0px;
+        width: 130px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+      }
+      /* When the input field gets focus, change its width to 100% */
+      input[type=text]:focus {
+          width: 100%;
+      }
+    }
+
+    .hollow {
+      font-family: $quicksand;
+      margin-top: 12px;
+      color: $scheme-cream;
+      background-color: $scheme-red;
+      border-style: solid;
+      border-width: thin;
+      border-color: $scheme-cream;
+
+      &:hover {
+        color: $scheme-red;
+        background-color: $scheme-cream;
+        border-style: solid;
+        border-width: thin;
+        border-color: $scheme-red;
+      }
+    }
+  }
+}
+
+.mainheader {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: image-url("skyline.jpg") no-repeat center;
+  border-bottom-style: 10px solid $scheme-cream;
+  background-size: cover;
+
+  h1 {
+    text-align: center;
+    font-family: $monoton;
+    font-size: 75px;
+    background-color: $scheme-red;
+    color: $scheme-cream;
+    margin: auto;
+    margin-top: 300px;
+    padding: 5px 5px;
+    width: auto;
+    border-color: $scheme-cream;
+    border-width: 10px;
+    border-style: double;
+    border-bottom-color: $scheme-red;
+  }
+}
+
+.blue {
+  color: $scheme-light-blue;
+}
+
+.index {
+  text-align: center;
+  margin: 0;
+  padding: 15px;
+  padding-top: 25px;
+  background-color: $scheme-red;
+
+  .indexLink {
+    a {
+      text-align: center;
+      padding: 5px;
+      margin: 10px;
+      font-size: 30px;
+      font-family: $quicksand;
+      color: $scheme-cream;
+      background-color: $scheme-dark-blue;
+      border-style: solid;
+      border-width: thin;
+      border-color: $scheme-cream;
+      transition: all 0.2s ease 0s;
+
+      &:hover {
+        color: $scheme-dark-blue;
+        background-color: $scheme-cream;
+        border-style: solid;
+        border-width: thin;
+        border-color: $scheme-dark-blue;
+      }
+    }
+
+  }
+
+  .search {
+    margin: 20px 0;
+    input {
+      font-family: $quicksand;
+      border-style: solid;
+      border-width: 2px;
+      border-color: $scheme-dark-blue;
+      background: linear-gradient(90deg, $scheme-white, $scheme-cream);
+
+    }
+    input[type=text] {
+      margin: 0 auto;
+      width: 25%;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+    /* When the input field gets focus, change its width to 100% */
+    input[type=text]:focus {
+      width: 100%;
+    }
+  }
+
+  .muralIndexTile {
+    margin: 20px;
+    border: 2px solid $scheme-red;
+    box-shadow: 0 0 16px 5px $scheme-dark-blue;
+
+    a {
+      text-align: center;
+      margin: 15px auto;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin: 0 auto;
+      font-size: 18px;
+      text-align: center;
+      font-family: $fugaz;
+      color: $scheme-dark-blue;
+      border: 1px solid $scheme-red;
+      border-bottom-width: 2px;
+      background-color: $scheme-cream;
+      transition: all 0.2s ease 0s;
+
+      &:hover {
+        background-color: $scheme-dark-blue;
+        color: $scheme-cream;
+      }
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+    }
+
+    &:hover {
+      position: relative;
+      top: -5px;
+      left: -5px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+
+    &:active{
+      position: relative;
+      top: 0px;
+      left: 0px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+  }
+}
+
+.MuralShowTile {
+  margin: 0 auto;
+  background-color: $scheme-red;
+
+  .tile{
+    border: 5px solid $scheme-dark-blue;
+    background-color: $scheme-cream;
+    text-align: center;
+    margin: 40px auto;
+
+    img {
+      margin-bottom: 10px;
+      width: 60%;
+      transition: all 0.2s ease 0s;
+
+      &:hover {
+        width: 100%;
+      }
+    }
+
+    h4 {
+      font-family: $quicksand;
+      font-weight: bold;
+      font-size: 36px;
+      margin: 0 auto;
+      text-align: left;
+      margin-bottom: 10px;
+      padding: 0px;
+    }
+
+    h3 {
+      font-family: $quicksand;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 0 auto;
+      padding: 0px;
+      text-align: right;
+    }
+
+    p {
+      margin-top: 15px;
+      font-family: $raleway;
+      font-size: 24px;
+      text-align: left;
+      text-indent: 25px;
+    }
+
+    h2 {
+      font-family: $fugaz;
+      font-size: 18px;
+      text-align: right;
+    }
+  }
+}
+
+.flash {
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: $raleway;
+  background-color: $scheme-red;
+  color: $scheme-cream;
+  width: 100%;
+}
+
+.reviewTile {
+  border: 3px solid $scheme-red;
+  margin: 20px;
+  padding: 15px;
+  background-color: $scheme-cream;
+
+  h4 {
+    font-family: $quicksand;
+    font-weight: bold;
+    font-size: 28px;
+    margin: 0 auto;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 0px;
+  }
+
+  h3 {
+    margin: 0 auto;
+    margin-left: 10px;
+    font-family: $fugaz;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0px;
+    text-align: left;
+  }
+
+  p {
+    margin-top: 12px;
+    font-family: $raleway;
+    font-size: 24px;
+    text-align: left;
+    text-indent: 25px;
+  }
+
+  h2 {
+    font-family: $fugaz;
+    font-size: 18px;
+    text-align: right;
+  }
+}
+
+.newMuralLink {
+  a {
+    color: $scheme-cream;
+
+    &:hover {
+      color: $scheme-dark-blue;
+    }
+  }
+
+  color: $scheme-cream;
+  margin: 25px auto;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 5px;
+  font-size: 30px;
+  font-family: $quicksand;
+  background-color: $scheme-red;
+  border-style: solid;
+  border-width: thin;
+  border-color: $scheme-cream;
+  transition: all 0.2s ease 0s;
+
+  &:hover {
+    color: $scheme-dark-blue;
+    background-color: $scheme-cream;
+    border-style: solid;
+    border-width: thin;
+    border-color: $scheme-dark-blue;
+  }
+
+}
+
+.reviews {
+  background-color: $scheme-light-blue;
+}
+
+.add_new {
+  background-color: $scheme-red;
+  padding: 20px auto;
+
+
+  h1 {
+    color: $scheme-light-blue;
+    margin: 20px;
+    font-size: 50px;
+    font-family: $fugaz;
+  }
+
+  label {
+    color: $scheme-light-blue;
+    font-size: 30px;
+    font-family: $quicksand;
+  }
+  input {
+    font-size: 20px;
+    font-family: $quicksand;
+    background-color: $scheme-cream;
+    border: 3px solid $scheme-red;
+    box-shadow: 20 25 66px $scheme-dark-blue;
+  }
+
+  input[type=radio] {
+    width: 1em;
+    height: 1em;
+  }
+}
